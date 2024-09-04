@@ -1,5 +1,5 @@
-from src.conexao import Conexao
+from src.extract import ExtractGLPData
 
-conexao = Conexao()
+extract = ExtractGLPData()
 
-conexao.list_buckets()
+extract.baixa_urls()
