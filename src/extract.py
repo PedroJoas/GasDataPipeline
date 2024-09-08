@@ -9,7 +9,6 @@ class ExtractGLPData:
     def __init__(self) -> None:
         self.url_base = 'https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/glp/glp-{}-0{}.csv'
         self.diretorio = 'data/'
-        pass
 
     def _gera_urls(self):
         anos = list(range(2004, 2025))

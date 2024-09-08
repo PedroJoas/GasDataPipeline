@@ -1,5 +1,13 @@
-from src.extract import ExtractGLPData
+from src.conexao import APIConnection
 
-extract = ExtractGLPData()
+connection = APIConnection()
+connection.authenticate()
 
-extract.baixa_urls()
+code = input("Digite o code copiado: ")
+access_token = connection.acquire_access_token(code)
+
+print(f"Access Token: {access_token}")
+
+# Example of making a request
+response = connection.make_graph_request('me')
+print(response)
