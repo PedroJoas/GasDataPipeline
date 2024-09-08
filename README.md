@@ -55,4 +55,18 @@ execute o seguinte comando para instalar todas as bibliotecas listadas no arquiv
 pip install -r requirements.txt
 ```
 
+3. **Configuração do dotenv**
+
+Dotenv é uma lib para tratar as variáveis de ambiente de forma segura.
+
+Crie um arquivo ```.env``` no seu diretório, sua configuração está da seguinte forma:
+
+```bash
+APP_ID = "you_app_id"
+CLIENT_SECRET = "your_client_secret"
+```
+Essas duas credenciais são obtidas na configuração da aplicação via [Azure](https://portal.azure.com/#view/Microsoft_AAD_RegisteredApps/).
+
+Não esqueça de colocar o arquivo ```.env``` no gitignore, pois contém informações sensíveis.
+
 Pronto, após esses passos é só começar a codar ;)
