@@ -9,7 +9,8 @@ class APIConnection:
         load_dotenv()
         self.APP_ID = os.getenv("APP_ID")
         self.CLIENT_SECRET = os.getenv("CLIENT_SECRET")
-        self.authority_url = 'https://login.microsoftonline.com/common'
+        # Para contas de organizações use o commom, caso seja pessoal use consumers
+        self.authority_url = 'https://login.microsoftonline.com/common' 
         self.base_url = 'https://graph.microsoft.com/v1.0/'
         self.scopes = ['User.Read', 'Files.ReadWrite']
         self.client_instance = msal.ConfidentialClientApplication(
